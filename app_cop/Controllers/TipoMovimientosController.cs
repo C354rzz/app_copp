@@ -114,7 +114,7 @@ namespace app_cop.Controllers
             _context.TipoMovimiento.Add(tMovimiento);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetTipoMovimiento", new { id = tMovimiento.IdTMovimiento }, tMovimiento);
+            return CreatedAtAction("GetTipoMovimientoId", new { id = tMovimiento.IdTMovimiento }, tMovimiento);
         }
 
         // DELETE: api/TipoMovimiento/5

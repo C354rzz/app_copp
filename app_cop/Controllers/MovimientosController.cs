@@ -14,6 +14,10 @@ namespace app_cop.Controllers
     {
         private readonly AppDbContext _context;
 
+        public MovimientosController(AppDbContext context)
+        {
+            _context = context;
+        }
         // GET: api/MovimientoExists
         /// <summary>
         /// Retorna todos los Movimiento
@@ -27,7 +31,12 @@ namespace app_cop.Controllers
             {
                 throw new SomeException();
             }
-            return await _context.Movimiento.ToListAsync();
+            var mov = _context.Movimiento
+                  .Include(u => u.Empleado)
+                    .ThenInclude(r => r.Rol)
+                  .Include(t => t.TipoMovimiento)
+                  .AsNoTracking();
+            return await mov.ToListAsync();
         }
 
         // GET: api/Movimiento/5
@@ -43,7 +52,11 @@ namespace app_cop.Controllers
             {
                 throw new SomeException();
             }
-            var movimiento = await _context.Movimiento.FindAsync(id);
+            var movimiento = await _context.Movimiento.Where(u => u.IdMovimiento == id)
+                  .Include(u => u.Empleado)
+                    .ThenInclude(r => r.Rol)
+                  .Include(t => t.TipoMovimiento)
+                  .FirstOrDefaultAsync();
 
             if (movimiento == null)
             {
@@ -104,7 +117,7 @@ namespace app_cop.Controllers
             _context.Movimiento.Add(movimiento);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetMovimiento", new { id = movimiento.IdMovimiento }, movimiento);
+            return CreatedAtAction("GetMovimientoId", new { id = movimiento.IdMovimiento }, movimiento);
         }
 
         // DELETE: api/Movimiento/5

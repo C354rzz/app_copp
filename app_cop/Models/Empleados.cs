@@ -22,40 +22,11 @@ namespace app_cop.Models
         public string ApellidoEmp { get; set; }
 
         [Required]
-        [Column("FechaNac")]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime FecNacimiento { get; set; }
+        [Column("RolId")]
+        public int RolId { get; set; }
 
-        [Column("Rfc")]
-        [DisplayFormat(NullDisplayText = "Sin Rfc")]
-        [StringLength(15)]
-        public string Rfc { get; set; }
+        [ForeignKey("RolId")]
+        public Roles? Rol { get; set; }
 
-        [Required]
-        [Column("Correo")]
-        [DataType(DataType.EmailAddress)]
-        public string Correo { get; set; }
-
-        [Required]
-        [Column("Referencia")]
-        [StringLength(3)]
-        public string Referencia { get; set; }
-
-        [Required]
-        [Column("SeguroSocial")]
-        [Range(0, int.MaxValue)]
-        public int SeguroSocial { get; set; }
-
-
-        [Required]
-        [Column("Created_At")]
-        [DataType(DataType.DateTime)]
-        public DateTime Created_At { get; set; } = DateTime.Now;
-
-        [Required]
-        [Column("Updated_At")]
-        [DataType(DataType.DateTime)]
-        public DateTime Updated_At { get; set; } = DateTime.Now;
     }
 }

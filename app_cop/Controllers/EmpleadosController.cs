@@ -33,7 +33,11 @@ namespace app_cop.Controllers
             {
                 throw new SomeException();
             }
-            return await _context.Empleado.ToListAsync();
+
+            var emps = _context.Empleado
+                  .Include(u => u.Rol)
+                  .AsNoTracking();
+            return await emps.ToListAsync();
         }
 
         // GET: api/Empleados/5
@@ -49,7 +53,12 @@ namespace app_cop.Controllers
             {
                 throw new SomeException();
             }
-            var empleados = await _context.Empleado.FindAsync(id);
+            //var empleados = await _context.Empleado.FindAsync(id);
+
+            var empleados = await _context.Empleado.Where(u => u.IdEmpleado == id)
+                  .Include(r => r.Rol)
+                  .FirstOrDefaultAsync();
+
 
             if (empleados == null)
             {

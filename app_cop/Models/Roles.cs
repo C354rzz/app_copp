@@ -21,21 +21,5 @@ namespace app_cop.Models
         [StringLength(255)]
         public string? DescripcionRol { get; set; }
 
-        [Required]
-        [Column("Status")]
-        [StringLength(1)]
-        public string StatusRol { get; set; } = "1";
-
-
-        [Required]
-        [Column("Created_At")]
-        [DataType(DataType.DateTime)]
-        public DateTime Created_At { get; set; } = DateTime.Now;
-
-        [Required]
-        [Column("Updated_At")]
-        [DataType(DataType.DateTime)]
-        public DateTime Updated_At { get; set; } = DateTime.Now;
-
     }
 }

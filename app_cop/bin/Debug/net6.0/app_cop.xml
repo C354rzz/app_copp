@@ -79,6 +79,16 @@
             Elimina Rol por ID
             </summary>
         </member>
+        <member name="T:app_cop.Controllers.TipoMovimientosController">
+            <summary>
+            Controlador TipoMovimiento
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.TipoMovimientosController.#ctor(app_cop.Data.AppDbContext)">
+            <summary>
+            Connect dbContext
+            </summary>
+        </member>
         <member name="M:app_cop.Controllers.TipoMovimientosController.GetTipoMovimiento">
             <summary>
             Retorna todos los TipoMovimiento

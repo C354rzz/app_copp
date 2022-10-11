@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>app_cop</name>
+    </assembly>
+    <members>
+        <member name="M:app_cop.Controllers.EmpleadosController.GetEmpleados">
+            <summary>
+            Retorna todos lo empleado en formatro Json
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.EmpleadosController.GetEmpleadoId(System.Int32)">
+            <summary>
+            Retorna un Empleado espesifico por el IdEmpleado formatro Json
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.EmpleadosController.UpdEmpleado(System.Int32,app_cop.Models.Empleados)">
+            <summary>
+            Actualiza los datos de un Empleado
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.EmpleadosController.SetEmpleado(app_cop.Models.Empleados)">
+            <summary>
+            Agrega nuevo Empleado 
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.EmpleadosController.DeleteEmpleados(System.Int32)">
+            <summary>
+            Elimina Empleado por ID
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.MovimientosController.GetMovimiento">
+            <summary>
+            Retorna todos los Movimiento
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.MovimientosController.GetMovimientoId(System.Int32)">
+            <summary>
+            Retorna un Movimiento especifico por ID
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.MovimientosController.PutMovimientoId(System.Int32,app_cop.Models.Movimientos)">
+            <summary>
+            Actualiza Movimiento por ID
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.MovimientosController.PostMovimiento(app_cop.Models.Movimientos)">
+            <summary>
+            Agrega Movimiento
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.MovimientosController.DelMovimientoId(System.Int32)">
+            <summary>
+            Elimina Movimiento por ID
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.RolesController.GetRoles">
+            <summary>
+            Retorna todos los roles de empleados
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.RolesController.GetRolId(System.Int32)">
+            <summary>
+            Retorna un Rol especifico por ID
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.RolesController.PutRolId(System.Int32,app_cop.Models.Roles)">
+            <summary>
+            Actualiza Rol por ID
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.RolesController.PostRol(app_cop.Models.Roles)">
+            <summary>
+            Agrega Rol
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.RolesController.DelRolId(System.Int32)">
+            <summary>
+            Elimina Rol por ID
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.TipoMovimientosController.GetTipoMovimiento">
+            <summary>
+            Retorna todos los TipoMovimiento
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.TipoMovimientosController.GetTipoMovimientoId(System.Int32)">
+            <summary>
+            Retorna un TipoMovimiento especifico por ID
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.TipoMovimientosController.PutTipoMovimientoId(System.Int32,app_cop.Models.TipoMovimientos)">
+            <summary>
+            Actualiza TipoMovimiento por ID
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.TipoMovimientosController.PostTipoMovimiento(app_cop.Models.TipoMovimientos)">
+            <summary>
+            Agrega TipoMovimiento
+            </summary>
+        </member>
+        <member name="M:app_cop.Controllers.TipoMovimientosController.DelTipoMovimientoId(System.Int32)">
+            <summary>
+            Elimina TipoMovimiento por ID
+            </summary>
+        </member>
+    </members>
+</doc>

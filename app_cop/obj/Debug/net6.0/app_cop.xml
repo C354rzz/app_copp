@@ -79,6 +79,11 @@
             Elimina Rol por ID
             </summary>
         </member>
+        <member name="M:app_cop.Controllers.RptEmpleadoMesController.GetReporteEmpMes(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Retorna Reporte de Moviemnto por Mes y EMpleados
+            </summary>
+        </member>
         <member name="T:app_cop.Controllers.TipoMovimientosController">
             <summary>
             Controlador TipoMovimiento

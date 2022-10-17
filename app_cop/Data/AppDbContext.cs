@@ -14,6 +14,7 @@ namespace app_cop.Data
         public DbSet<Roles> Rol { get; set; }
         public DbSet<Movimientos> Movimiento { get; set; }
         public DbSet<TipoMovimientos> TipoMovimiento { get; set; }
+        public DbSet<RptEmpleadoMes> RptEmpleadosMes { get; set; }
 
     }
 }
